@@ -121,6 +121,7 @@ function setupDetector(){
     dataStore.detector.channelLayer = [];
     dataStore.detector.HVLayer = [];
     dataStore.detector.scaleLayer = [];
+
     for(i=0; i<dataStore.detector.views.length; i++){
         dataStore.detector.stage[i] = new Kinetic.Stage({
             container: dataStore.detector.views[i] + 'Wrap',
@@ -135,6 +136,7 @@ function setupDetector(){
         dataStore.detector.stage[i].add(dataStore.detector.channelLayer[i]);
         dataStore.detector.stage[i].add(dataStore.detector.HVLayer[i]);
     }
+    console.log(end-start)
 }
 
 function preFetch(){
